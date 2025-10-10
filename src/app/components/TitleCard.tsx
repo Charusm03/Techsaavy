@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FloatingNavDemo } from './Navbar';
+import FloatingNavDemo from './Navbar';
 
 const TitleCard = () => {
   const [isMobile, setIsMobile] = useState(false);
