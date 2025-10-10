@@ -204,7 +204,7 @@ const clubMembers = [
   {
     name: 'Mr. T S Shanmukh Vashtav',
     position: 'Project Analyst',
-    imageSrc: '/shanmukh.jpg',
+    imageSrc: '/vashtav.jpg',
     level: '★★',
     type: 'Education',
     skills: ['Technical Training', 'Curriculum Design', 'Mentoring'],
@@ -223,7 +223,7 @@ const clubMembers = [
     name: 'Mr. Sundaresan S',
     position: 'Content Creator',
     imageSrc: '/sundaresan.jpg',
-    level: '★★★',
+    level: '★★',
     type: 'Blockchain',
     skills: ['Smart Contracts', 'Web3', 'Cryptocurrency'],
     quote: 'Exploring decentralized technologies and blockchain applications.'
@@ -232,7 +232,7 @@ const clubMembers = [
     name: 'Ms. Radhika M',
     position: 'Public Relation Associate',
     imageSrc: '/radhika.jpg',
-    level: '★★★★',
+    level: '★★',
     type: 'AI',
     skills: ['Artificial Intelligence', 'Deep Learning', 'Neural Networks'],
     quote: 'Pushing the boundaries of AI and machine intelligence.'
@@ -241,7 +241,7 @@ const clubMembers = [
     name: 'Mr. Mimith Fredderik R',
     position: 'Treasury Lead',
     imageSrc: '/mimith.jpg',
-    level: '★★★',
+    level: '★★',
     type: 'Gaming',
     skills: ['Unity', 'C#', 'Game Design'],
     quote: 'Creating immersive gaming experiences and interactive applications.'
