@@ -1,113 +1,160 @@
 "use client";
 import React from "react";
 import { AnimatedTooltip } from "./ui/animated";
+
 const people = [
-  {
-    id: 1,
-    name: "CYRIL JUDE VICTOR V",
-    designation: "ASSOCIATE HEAD",
-    image:
-      "/Cyril Jude Victor - Associate Head .jpg",
-  },
-  {
-    id: 2,
-    name: "Mr.Giridharan K.",
-    designation: "OPERATIONS MANAGER",
-    image:
-      "/giri.png",
-  },
-  {
-    id: 4,
-    name: "Mr.Arul Kumaran K V.",
-    designation: "FINANCIAL HEAD",
-    image:
-      "/arul.png",
-  },
-  {
-    id: 5,
-    name: "Ms.Sandra Infantia Rodrigo J.",
-    designation: "PUBLIC RELATION OFFICER",
-    image:
-      "/sandra.png",
-  },
-  {
-    id: 6,
-    name: "Ms.Divya Sree M.",
-    designation: "PROJECT HEAD",
-    image:
-      "/divya.png",
-  },
-  {
-    id: 7,
-    name: "MANOJ KANNA K",
-    designation: "TECH LEAD",
-    image:
-      "/manojkanna.jpg",
-  },
-  {
-    id: 8,
-    name: "PADMA SURUTHI S",
-    designation: "EVENT HEAD",
-    image:
-      "/Padma Suruthi S III B.jpg",
-  },
-  {
-    id: 9,
-    name: "NANDHEETHA V",
-    designation: "ALUMNI NETWORK MANAGER",
-    image:
-      "/Nandheetha V III IT B.jpg",
-  },
-  {
-    id: 10,
-    name: "SAKTHI MANIKANDAN S",
-    designation: "BRAND MANAGER",
-    image:
-      "/Sakthi Manikandan .jpg",
-  },
-  {
-    id: 11,
-    name: "GOWTHAM M",
-    designation: "JOIN ASSOCIATE HEAD",
-    image:
-      "/Gowtham .jpg",
-  
-  },
-  {
-    id: 12,
-    name: "VIBU SREE CHARAN M S",
-    designation: "Event Head",
-    image:
-      "/Vibhu - Event Lead.jpg",
-  
-  },
-  {
-    id: 13,
-    name: "DIYA U",
-    designation: "INNOVATIVE LEAD",
-    image:
-      "/DIYA ID.jpg",
-  },
-  {
-    id: 14,
-    name: "LINGESH J",
-    designation: "DESIGN LEAD",
-    image:
-      "/Lingesh J II B.JPG",
-  },
-  {
-    id: 15,
-    name: "RACHEL EVA",
-    designation: "CONTENT LEAD",
-    image:
-      "/Rachel Eva.jpg",
-  },
+	{
+		id: 1,
+		name: "Mr. Manoj Kanna K",
+		designation: "EXECUTIVE PRESIDENT",
+		image: "/manoj.jpg",
+	},
+	{
+		id: 2,
+		name: "Ms. Padma Suruthi S",
+		designation: "OPERATIONS MANAGER",
+		image: "/padma.jpg",
+	},
+	{
+		id: 3,
+		name: "Mr. Pradeep P",
+		designation: "GENERAL SECRETARY",
+		image: "/pradeep.jpg",
+	},
+	{
+		id: 4,
+		name: "Ms. Nandheetha V",
+		designation: "PROJECT HEAD",
+		image: "/nandheetha.jpg",
+	},
+	{
+		id: 5,
+		name: "Mr. Krishna Kumar E",
+		designation: "TREASURER",
+		image: "/krishna.jpg",
+	},
+	{
+		id: 6,
+		name: "Mr. Pravin B H",
+		designation: "EDITORIAL HEAD",
+		image: "/pravin.jpg",
+	},
+	{
+		id: 7,
+		name: "Mr. Gowtham M",
+		designation: "VICE PRESIDENT",
+		image: "/gowtham.jpg",
+	},
+	{
+		id: 8,
+		name: "Mr. Lingesh J",
+		designation: "TECH LEAD",
+		image: "/lingesh.jpg",
+	},
+	{
+		id: 9,
+		name: "Mr. Pavithran A G",
+		designation: "OPERATION LEAD",
+		image: "/pavithran.jpg",
+	},
+	{
+		id: 10,
+		name: "Ms. Ananya G",
+		designation: "EVENT HEAD",
+		image: "/ananya.jpg",
+	},
+	{
+		id: 11,
+		name: "Ms. Charu S M",
+		designation: "DESIGN HEAD",
+		image: "/charu.jpg",
+	},
+	{
+		id: 12,
+		name: "Mr. Madhu Ram Prakash C",
+		designation: "BRAND MANAGER",
+		image: "/maddy.jpg",
+	},
+	{
+		id: 13,
+		name: "Mr. Sajjad Ahmed T A",
+		designation: "TREASURY ASSOCIATE",
+		image: "/sajjad.jpg",
+	},
+	{
+		id: 14,
+		name: "Mr. Varun Muthu Akash B",
+		designation: "SECRETARY",
+		image: "/varun.jpg",
+	},
+	{
+		id: 15,
+		name: "Ms. Raagavi S",
+		designation: "EVENT LEAD",
+		image: "/raagavi.jpg",
+	},
+	{
+		id: 16,
+		name: "Ms. Hasna Fahima",
+		designation: "DEVELOPMENT LEAD",
+		image: "/hasna.jpg",
+	},
+	{
+		id: 17,
+		name: "Mr. Anirudhram G",
+		designation: "IDEATION SPECIALIST",
+		image: "/anirudh.jpg",
+	},
+	{
+		id: 18,
+		name: "Mr. T S Shanmukh Vashtav",
+		designation: "PROJECT ANALYST",
+		image: "/vashtav.jpg",
+	},
+	{
+		id: 19,
+		name: "Ms. Bhavya Shree G",
+		designation: "DESIGN LEAD",
+		image: "/bhavya.jpg",
+	},
+	{
+		id: 20,
+		name: "Mr. Sundaresan S",
+		designation: "CONTENT CREATOR",
+		image: "/sundaresan.jpg",
+	},
+	{
+		id: 21,
+		name: "Ms. Radhika M",
+		designation: "PUBLIC RELATIONS ASSOCIATE",
+		image: "/radhika.jpg",
+	},
+	{
+		id: 22,
+		name: "Mr. Mimith Fredderik R",
+		designation: "TREASURY LEAD",
+		image: "/mimith.jpg",
+	},
 ];
 
 export function AnimatedTooltipPreview() {
-  return (
-    <div className="flex flex-row items-center justify-center mb-10 w-full">
-      <AnimatedTooltip items={people} />
-    </div>
-  );
+	return (
+		<div className="w-full max-w-7xl mx-auto px-4">
+			{/* Grid layout for better organization */}
+			<div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-8 gap-6 mb-10">
+				{people.map((person) => (
+					<div key={person.id} className="flex justify-center">
+						<AnimatedTooltip items={[person]} />
+					</div>
+				))}
+			</div>
+
+			{/* Alternative: Flexbox with better wrapping */}
+			{/* <div className="flex flex-wrap justify-center gap-4 mb-10 max-w-6xl mx-auto">
+        {people.map((person) => (
+          <AnimatedTooltip key={person.id} items={[person]} />
+        ))}
+      </div> */}
+		</div>
+	);
 }

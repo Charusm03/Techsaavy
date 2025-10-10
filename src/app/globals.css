@@ -1,92 +1,164 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-black text-white;
-  font-family: 'Inter', sans-serif;
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-black text-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
 }
 
-.no-scrollbar::-webkit-scrollbar {
-  display: none; 
+@layer components {
+  .tech-bg {
+    @apply fixed inset-0 z-[-10];
+    background: 
+      radial-gradient(ellipse at top, #001122 0%, #000011 50%, #000000 100%),
+      linear-gradient(45deg, #000011 0%, #001a33 25%, #000022 50%, #001122 75%, #000011 100%);
+    background-size: 400% 400%;
+    animation: techWave 20s ease-in-out infinite;
+  }
+  
+  .tech-text {
+    background: linear-gradient(45deg, #00ffff, #ff00ff, #ffff00);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: textFlow 4s ease-in-out infinite;
+  }
+  
+  .cyber-card {
+    background: linear-gradient(135deg, rgba(0, 17, 34, 0.8), rgba(0, 34, 68, 0.6));
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .cyber-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(0, 255, 255, 0.1), transparent);
+    animation: shimmer 3s linear infinite;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .cyber-card:hover::before {
+    opacity: 1;
+  }
+  
+  .cyber-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+    border-color: rgba(0, 255, 255, 0.6);
+  }
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;
-  scrollbar-width: none; 
+/* Enhanced Keyframes */
+@keyframes techWave {
+  0%, 100% { 
+    background-position: 0% 50%;
+    filter: hue-rotate(0deg);
+  }
+  50% { 
+    background-position: 100% 50%;
+    filter: hue-rotate(45deg);
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar {
-  width: 12px;
+@keyframes textFlow {
+  0%, 100% { 
+    background-position: 0% 50%;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.8);
+  }
+  50% { 
+    background-position: 100% 50%;
+    text-shadow: 0 0 20px rgba(255, 0, 255, 0.8);
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(0, 0, 0, 0.1);
+@keyframes gridMove {
+  0% { transform: translate(0, 0); }
+  100% { transform: translate(60px, 60px); }
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.3);
-  border-radius: 8px; 
+@keyframes floatRotate {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg) scale(1);
+  }
+  33% {
+    transform: translateY(-20px) rotate(120deg) scale(1.1);
+  }
+  66% {
+    transform: translateY(10px) rotate(240deg) scale(0.9);
+  }
 }
 
-.custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(0, 0, 0, 0.5); 
+@keyframes floatUp {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-30px) translateX(20px);
+    opacity: 0.8;
+  }
 }
 
-
-.custom-scrollbar {
-  scrollbar-width: thin; 
-  scrollbar-color: rgba(0, 0, 0, 0.3) rgba(0, 0, 0, 0.1); 
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%) translateY(-100%) rotate(45deg);
+  }
+  100% {
+    transform: translateX(100%) translateY(100%) rotate(45deg);
+  }
 }
 
-/* Add styles for the loading spinner if needed */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+    border-color: rgba(0, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 255, 0.7);
+    border-color: rgba(255, 0, 255, 0.5);
+  }
 }
 
-.animate-spin {
-  animation: spin 1s linear infinite;
+/* Responsive animations */
+@media (max-width: 768px) {
+  .tech-bg {
+    animation-duration: 30s;
+  }
+  
+  @keyframes gridMove {
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(40px, 40px); }
+  }
 }
 
-#nprogress {
-  pointer-events: none; /* Prevent interaction with the progress bar */
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
 }
 
-/* Customize the bar */
-#nprogress .bar {
-  background: #7d0000; /* A bold color for the progress bar */
-  height: 4px; /* Slightly thicker for better visibility */
-  border-radius: 2px; /* Rounded corners for a modern look */
+::-webkit-scrollbar-track {
+  background: #001122;
 }
 
-/* Add an animation to the bar */
-#nprogress .bar {
-  transition: width 0.2s ease-in-out; /* Smooth transition for width changes */
-}
-
-/* Customize the spinner */
-#nprogress .spinner {
-  position: fixed; /* Fix spinner position */
-  top: 15px; /* Adjust top position */
-  right: 15px; /* Adjust right position */
-  width: 80px; /* Size of the spinner */
-  height: 80px; /* Size of the spinner */
-}
-
-/* Customize the spinner icon */
-#nprogress .spinner-icon {
-  border-top: 3px solid #ac0202; /* Match the spinner color with the bar */
-  border-right: 3px solid transparent; /* Transparent side */
-  border-radius: 50%; /* Circular spinner */
-  width: 100%; /* Full width of the spinner container */
-  height: 100%; /* Full height of the spinner container */
-  animation: spin 1s linear infinite; /* Spin animation */
-}
-
-/* Keyframes for spinner animation */
-@keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #00ffff, #ff00ff);
+  border-radius: 4px;
 }
