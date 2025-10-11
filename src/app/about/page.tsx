@@ -105,7 +105,7 @@ const clubMembers = [
   {
     name: 'Mr. Gowtham M',
     position: 'Vice President',
-    imageSrc: '/gowtham.jpg',
+    imageSrc: '/gowtham.JPG',
     level: '★★★',
     type: 'Creative',
     skills: ['Technical Writing', 'Video Production', 'Documentation'],
@@ -132,7 +132,7 @@ const clubMembers = [
   {
     name: 'Ms. Ananya G',
     position: 'Event Head',
-    imageSrc: '/ananya.jpg',
+    imageSrc: '/ananya.JPG',
     level: '★★★',
     type: 'Security',
     skills: ['Cybersecurity', 'Penetration Testing', 'Risk Assessment'],
@@ -141,7 +141,7 @@ const clubMembers = [
   {
     name: 'Ms. Charu S M',
     position: 'Design Head',
-    imageSrc: '/charu.jpg',
+    imageSrc: '/charu.JPG',
     level: '★★★',
     type: 'Analytics',
     skills: ['Data Mining', 'Statistical Analysis', 'Visualization'],
@@ -211,7 +211,7 @@ const clubMembers = [
     quote: 'Empowering members through hands-on learning experiences.'
   },
   {
-    name: 'Ms. Bhavya Shree G',
+    name: 'Ms. Bhavya Shrree G',
     position: 'Design Lead',
     imageSrc: '/bhavya.jpg',
     level: '★★',
