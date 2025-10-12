@@ -55,9 +55,6 @@ export default function Footer() {
               Ramapuram, Chennai-89
             </p>
           </div>
-          <p className="text-gray-500 text-sm">
-            © {new Date().getFullYear()} TechSaavy. All rights reserved.
-          </p>
         </div>
       </div>
     </footer>

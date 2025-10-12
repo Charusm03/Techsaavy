@@ -22,72 +22,27 @@ const Page = () => {
 
   const upcomingEvents = [
     {
-      imgSrc: "/upcoming-event1.png",
-      title: "AI/ML Workshop Series",
-      description: "Hands-on workshop on Machine Learning fundamentals and practical implementations",
-      participants: "1-2",
-      amount: "₹150/person",
-      prize: "Certificates and project showcase opportunity",
-      venue: "Hi-Tech Hall-1, IT Block",
-      date: "December 15, 2024",
-      time: "2:00 PM - 5:00 PM",
-      registrationLink: "https://forms.google.com/ai-ml-workshop",
-      isClosed: false,
-      status: "Registration Open",
-      category: "Workshop"
+      imgSrc: "/devarena.jpg",
+      title: "Dev Arena",
+      description: "Intensive 24-hour hackathon focusing on real-world problem solving",
+      participants: "Teams of 3-4",
+      amount: "₹600",
+      prize: "Prize poll of 1 lakh rupees",
+      venue: "Easwari Campus",
+      date: "16th October to 17th October",
+      time: "24 hours",
+      registrationLink: "#",
+      isClosed: true,
+      status: "Ongoing",
+      category: "Hackathon"
     },
-    {
-      imgSrc: "/upcoming-event2.png",
-      title: "TechSaavy CodeSprint 2024",
-      description: "24-hour coding marathon with real-world problem statements",
-      participants: "2-4",
-      amount: "₹200/team",
-      prize: "₹10,000 cash prize + internship opportunities",
-      venue: "Computer Lab Complex",
-      date: "December 20-21, 2024",
-      time: "9:00 AM onwards",
-      registrationLink: "https://forms.google.com/codesprint-2024",
-      isClosed: false,
-      status: "Early Bird Discount",
-      category: "Competition"
-    },
-    {
-      imgSrc: "/ongoing-event1.png",
-      title: "Web Development Bootcamp",
-      description: "Intensive 4-week bootcamp covering MERN stack development",
-      participants: "Individual",
-      amount: "₹500",
-      prize: "Industry recognized certificate",
-      venue: "Online + Lab Sessions",
-      date: "Ongoing until Dec 30, 2024",
-      time: "Flexible timing",
-      registrationLink: "https://forms.google.com/web-bootcamp",
-      isClosed: false,
-      status: "Ongoing - Join Anytime",
-      category: "Bootcamp"
-    },
-    {
-      imgSrc: "/upcoming-event3.png",
-      title: "Tech Talk: Industry Insights",
-      description: "Guest speakers from top tech companies sharing industry trends",
-      participants: "Open to all",
-      amount: "Free",
-      prize: "Networking opportunities + swag",
-      venue: "TRP Auditorium",
-      date: "January 10, 2025",
-      time: "3:00 PM - 6:00 PM",
-      registrationLink: "https://forms.google.com/tech-talk",
-      isClosed: false,
-      status: "Free Registration",
-      category: "Seminar"
-    }
   ];
 
   const stats = [
-    { number: "500+", label: "Active Members" },
-    { number: "50+", label: "Events Conducted" },
-    { number: "25+", label: "Industry Partners" },
-    { number: "100+", label: "Projects Completed" }
+    { number: "25+", label: "Active Members" },
+    { number: "40+", label: "Events Conducted" },
+    { number: "5+", label: "Years Active" },
+    { number: "500+", label: "Students Trained" }
   ];
 
   return (
@@ -117,7 +72,7 @@ const Page = () => {
               TechSaavy
             </h1>
             <p className="text-xl md:text-2xl text-cyan-400 mb-2 animate-slideInRight">
-              Information Technology Department
+              Department of Information Technology
             </p>
             <p className="text-lg md:text-xl text-purple-400 mb-8 animate-fadeInUp">
               Easwari Engineering College
@@ -139,18 +94,18 @@ const Page = () => {
 
           <p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8 animate-fadeInUp">
             Empowering future technologists through innovation, collaboration, and cutting-edge learning experiences. 
-            Join us in shaping the digital tomorrow.
+            Experience the future of technology with us!
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center animate-fadeInUp">
             <Link href="/events">
               <button className="cyber-button rounded-lg">
-                Explore Events
+                Explore Our Events
               </button>
             </Link>
             <Link href="/about">
               <button className="cyber-button rounded-lg" style={{borderColor: '#ff00ff', color: '#ff00ff'}}>
-                Learn More
+                Learn More About Us
               </button>
             </Link>
           </div>
@@ -179,20 +134,28 @@ const Page = () => {
             <div className="animate-slideInRight">
               <div className="cyber-card p-8 rounded-lg">
                 <h3 className="text-2xl font-bold mb-6 text-center text-purple-400">
-                  Easwari Engineering College - IT Department
+                  What We Offer
                 </h3>
-                <div className="grid grid-cols-3 gap-6 text-center">
-                  <div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Established</h4>
-                    <p className="text-gray-300">1996</p>
+                <div className="grid grid-cols-2 gap-6">
+                  <div className="text-center p-4 rounded-lg bg-gradient-to-br from-cyan-500/10 to-blue-500/10 border border-cyan-500/20">
+                    <div className="text-3xl mb-2">🚀</div>
+                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Skill Development</h4>
+                    <p className="text-gray-300 text-sm">Workshops, bootcamps, and hands-on training</p>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Students</h4>
-                    <p className="text-gray-300">600+</p>
+                  <div className="text-center p-4 rounded-lg bg-gradient-to-br from-purple-500/10 to-pink-500/10 border border-purple-500/20">
+                    <div className="text-3xl mb-2">🏆</div>
+                    <h4 className="text-lg font-semibold text-purple-400 mb-2">Competitions</h4>
+                    <p className="text-gray-300 text-sm">Hackathons, coding contests, and tech challenges</p>
                   </div>
-                  <div>
-                    <h4 className="text-lg font-semibold text-cyan-400 mb-2">Faculty</h4>
-                    <p className="text-gray-300">40+</p>
+                  <div className="text-center p-4 rounded-lg bg-gradient-to-br from-green-500/10 to-emerald-500/10 border border-green-500/20">
+                    <div className="text-3xl mb-2">🤝</div>
+                    <h4 className="text-lg font-semibold text-green-400 mb-2">Networking</h4>
+                    <p className="text-gray-300 text-sm">Industry connections and peer collaboration</p>
+                  </div>
+                  <div className="text-center p-4 rounded-lg bg-gradient-to-br from-orange-500/10 to-red-500/10 border border-orange-500/20">
+                    <div className="text-3xl mb-2">📈</div>
+                    <h4 className="text-lg font-semibold text-orange-400 mb-2">Career Growth</h4>
+                    <p className="text-gray-300 text-sm">Project support and mentorship programs</p>
                   </div>
                 </div>
               </div>
@@ -208,90 +171,78 @@ const Page = () => {
             Upcoming & Ongoing Events
           </h2>
           
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-            {upcomingEvents.map((event, index) => (
-              <div
-                key={index}
-                className="cyber-card rounded-lg overflow-hidden cursor-pointer group animate-scaleIn"
-                style={{ animationDelay: `${index * 0.1}s` }}
-                onClick={() => setSelectedEvent(event)}
-              >
-                {/* Event Category Badge */}
-                <div className="absolute top-4 left-4 z-10">
-                  <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                    event.category === 'Workshop' ? 'bg-blue-600 text-white' :
-                    event.category === 'Competition' ? 'bg-green-600 text-white' :
-                    event.category === 'Bootcamp' ? 'bg-purple-600 text-white' :
-                    'bg-orange-600 text-white'
-                  }`}>
-                    {event.category}
-                  </span>
-                </div>
-
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4 z-10">
-                  <span className={`px-2 py-1 rounded text-xs font-semibold ${
-                    event.status.includes('Ongoing') ? 'bg-yellow-600 text-white' :
-                    event.status.includes('Free') ? 'bg-green-600 text-white' :
-                    'bg-red-600 text-white'
-                  } animate-pulse`}>
-                    {event.status}
-                  </span>
-                </div>
-
-                <div className="aspect-[4/5] matrix-bg flex items-center justify-center relative">
-                  <div className="text-6xl opacity-30 group-hover:opacity-60 transition-all duration-300">
-                    {event.category === 'Workshop' ? '🛠️' :
-                     event.category === 'Competition' ? '🏆' :
-                     event.category === 'Bootcamp' ? '💻' : '🎤'}
-                  </div>
-                  
-                  {/* Animated overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
-                </div>
-
-                <div className="p-4">
-                  <h3 className="font-bold text-lg text-cyan-400 mb-2 line-clamp-2 group-hover:text-white transition-colors">
-                    {event.title}
-                  </h3>
-                  <p className="text-gray-300 text-sm mb-3 line-clamp-2">{event.description}</p>
-                  
-                  <div className="space-y-1 text-xs text-gray-400 mb-4">
-                    <p>📅 {event.date}</p>
-                    <p>⏰ {event.time}</p>
-                    <p>💰 {event.amount}</p>
+          <div className="flex justify-center">
+            <div className="grid gap-6 max-w-md w-full">
+              {upcomingEvents.map((event, index) => (
+                <div
+                  key={index}
+                  className="cyber-card rounded-lg overflow-hidden cursor-pointer group animate-scaleIn"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                  onClick={() => setSelectedEvent(event)}
+                >
+                  {/* Event Category Badge */}
+                  <div className="absolute top-4 left-4 z-10">
+                    <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
+                      event.category === 'Workshop' ? 'bg-blue-600 text-white' :
+                      event.category === 'Competition' ? 'bg-green-600 text-white' :
+                      event.category === 'Bootcamp' ? 'bg-purple-600 text-white' :
+                      'bg-orange-600 text-white'
+                    }`}>
+                      {event.category}
+                    </span>
                   </div>
 
-                  <button className="w-full cyber-button text-sm rounded">
-                    View Details
-                  </button>
-                </div>
-              </div>
-            ))}
-          </div>
+                  {/* Status Badge */}
+                  <div className="absolute top-4 right-4 z-10">
+                    <span className={`px-2 py-1 rounded text-xs font-semibold ${
+                      event.status.includes('Ongoing') ? 'bg-yellow-600 text-white' :
+                      event.status.includes('Free') ? 'bg-green-600 text-white' :
+                      'bg-red-600 text-white'
+                    } animate-pulse`}>
+                      {event.status}
+                    </span>
+                  </div>
 
-          {/* Call to Action */}
-          <div className="text-center mt-16 animate-fadeInUp">
-            <h3 className="text-2xl font-bold mb-4 tech-text">Ready to Join TechSaavy?</h3>
-            <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-              Become part of our vibrant community and accelerate your tech journey with like-minded peers and industry experts.
-            </p>
-            <div className="space-x-4">
-              <button className="cyber-button rounded-lg">
-                Join Now
-              </button>
-              <button className="cyber-button rounded-lg" style={{borderColor: '#ff00ff', color: '#ff00ff'}}>
-                Learn More
-              </button>
+                  <div className="aspect-[4/5] matrix-bg flex items-center justify-center relative overflow-hidden">
+                    <Image
+                      src={event.imgSrc}
+                      alt={event.title}
+                      fill
+                      className="object-contain group-hover:scale-110 transition-transform duration-300 p-4"
+                    />
+                    
+                    {/* Animated overlay */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300"></div>
+                  </div>
+
+                  <div className="p-4">
+                    <h3 className="font-bold text-lg text-cyan-400 mb-2 line-clamp-2 group-hover:text-white transition-colors">
+                      {event.title}
+                    </h3>
+                    <p className="text-gray-300 text-sm mb-3 line-clamp-2">{event.description}</p>
+                    
+                    <div className="space-y-1 text-xs text-gray-400 mb-4">
+                      <p>📅 {event.date}</p>
+                      <p>⏰ {event.time}</p>
+                      <p>💰 {event.amount}</p>
+                    </div>
+
+                    <button className="w-full cyber-button text-sm rounded">
+                      View Details
+                    </button>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
+          {/* Call to Action */}
         </div>
       </section>
 
       {/* Event Modal */}
       {selectedEvent && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/90 p-4 z-50 backdrop-blur-sm">
-          <div className="cyber-card p-6 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-auto animate-scaleIn">
+          <div className="cyber-card p-6 rounded-lg max-w-2xl w-full max-h-[90vh] overflow-y-hidden">
             <div className="flex justify-between items-start mb-4">
               <div>
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block ${
@@ -327,23 +278,13 @@ const Page = () => {
               </div>
             </div>
 
-            <div className="flex gap-4 mt-6">
+            <div className="flex justify-center mt-6">
               <button
-                className="flex-1 px-4 py-3 bg-gray-700/50 text-white rounded-lg hover:bg-gray-600/50 transition-all"
+                className="px-6 py-3 bg-gray-700/50 text-white rounded-lg hover:bg-gray-600/50 transition-all"
                 onClick={() => setSelectedEvent(null)}
               >
                 Close
               </button>
-              <a 
-                href={selectedEvent.registrationLink} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="flex-1"
-              >
-                <button className="w-full cyber-button rounded-lg">
-                  Register Now
-                </button>
-              </a>
             </div>
           </div>
         </div>
