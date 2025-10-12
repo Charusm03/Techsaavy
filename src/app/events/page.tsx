@@ -200,24 +200,6 @@ export default function Events() {
                     {event.category}
                   </span>
                 </div>
-
-                {/* Status Badge */}
-                <div className="absolute top-4 right-4 z-10">
-                  <span
-                    className={`px-2 py-1 rounded text-xs font-semibold ${
-                      event.type === "ongoing"
-                        ? "bg-yellow-600 text-white"
-                        : event.type === "upcoming" && !event.isClosed
-                        ? "bg-green-600 text-white"
-                        : event.type === "past"
-                        ? "bg-gray-600 text-white"
-                        : "bg-red-600 text-white"
-                    } ${event.type === "ongoing" ? "animate-pulse" : ""}`}
-                  >
-                    {event.status}
-                  </span>
-                </div>
-
                 {/* Event Image/Icon */}
                 <div className="aspect-[4/5] matrix-bg flex items-center justify-center relative overflow-hidden">
                   <Image
@@ -261,30 +243,7 @@ export default function Events() {
             ))}
           </div>
         </div>
-
         {/* Call to Action */}
-        <div className="text-center animate-fadeInUp">
-          <div className="cyber-card p-12 rounded-lg max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold mb-6 tech-text">
-              Join Our Next Event
-            </h2>
-            <p className="text-gray-300 mb-8 text-lg">
-              Be part of our vibrant tech community and enhance your skills through
-              hands-on learning experiences.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="cyber-button rounded-lg">
-                Register for Events
-              </button>
-              <button
-                className="cyber-button rounded-lg"
-                style={{ borderColor: "#ff00ff", color: "#ff00ff" }}
-              >
-                Contact Us
-              </button>
-            </div>
-          </div>
-        </div>
       </div>
 
       {/* Event Modal */}

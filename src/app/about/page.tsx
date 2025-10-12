@@ -144,8 +144,8 @@ const clubMembers = [
     imageSrc: '/charu.JPG',
     level: '★★★',
     type: 'Analytics',
-    skills: ['Data Mining', 'Statistical Analysis', 'Visualization'],
-    quote: 'Turning data into actionable insights for club growth.'
+    skills: ['Narrative Design', 'Team Synergy', 'Visual Innovation'],
+    quote: 'Where ideas meet visuals and innovation finds its identity.'
   },
   {
     name: 'Mr. Madhu Ram Prakash C',
