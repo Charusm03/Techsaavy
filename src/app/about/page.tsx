@@ -413,7 +413,7 @@ const CardStack = ({ members }: { members: any[] }) => {
           onClick={() => handleCardClick((activeCard - 1 + members.length) % members.length)}
           disabled={isAnimating}
         >
-          <span className="text-xl">← Previous</span>
+          <span className="text-xl">← Prev</span>
         </button>
 
         <button
