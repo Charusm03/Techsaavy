@@ -531,28 +531,33 @@ export default function About() {
           </div>
         </div>
 
-        {/* Leadership Section - Pokemon Cards */}
-        <div className="max-w-6xl mx-auto mb-20">
+        {/* Combined Leaders and Members Section - Side by Side */}
+        <div className="max-w-full mx-auto mb-20">
           <h2 className="text-4xl font-bold text-center mb-12 tech-text">
-            Meet Our Leaders
+            Meet Our Team
           </h2>
           
-          <div className="flex justify-center">
-            <CardStack members={hierarchicalMembers} />
-          </div>
-        </div>
+          <div className="grid lg:grid-cols-2 gap-12">
+            {/* Leadership Section */
+            <div className="flex flex-col items-center">
+              <h3 className="text-3xl font-bold text-center mb-8 text-cyan-400">
+                Our Leaders
+              </h3>
+              <div className="flex justify-center w-full">
+                <CardStack members={hierarchicalMembers} />
+              </div>
+            </div>
+            }
 
-        {/* Club Members Section - Pokemon Cards (22 members) */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <h2 className="text-4xl font-bold text-center mb-12 tech-text">
-            Our Club Members
-          </h2>
-          <p className="text-center text-gray-300 mb-8 text-lg">
-            Meet our diverse team of 22 talented individuals driving innovation across various tech domains
-          </p>
-          
-          <div className="flex justify-center">
-            <CardStack members={clubMembers} />
+            {/* Club Members Section */}
+            <div className="flex flex-col items-center">
+              <h3 className="text-3xl font-bold text-center mb-8 text-purple-400">
+                Club Members
+              </h3>
+              <div className="flex justify-center w-full">
+                <CardStack members={clubMembers} />
+              </div>
+            </div>
           </div>
         </div>
 
