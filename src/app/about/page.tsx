@@ -4,9 +4,11 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import "../globals.css";
 import TechBackground from "../components/TechBackground";
-import { Inter } from "next/font/google";
+import { Inter, Orbitron, Space_Grotesk } from "next/font/google";
 
 const inter = Inter({ subsets: ['latin'] });
+const orbitron = Orbitron({ subsets: ['latin'] });
+const spaceGrotesk = Space_Grotesk({ subsets: ['latin'] });
 
 const hierarchicalMembers = [
   {
@@ -471,31 +473,50 @@ export default function About() {
         </div>
 
         {/* Mission & Vision Section */}
-        <div className="max-w-6xl mx-auto mb-20">
-          <div className="grid md:grid-cols-2 gap-12">
-            <div className="cyber-card p-8 rounded-lg">
-              <h2 className="text-3xl font-bold mb-6 text-cyan-400">Our Mission</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                To bridge the gap between academic learning and industry requirements by providing 
-                hands-on experience in cutting-edge technologies, fostering innovation, and building 
-                a community of passionate tech enthusiasts.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                We strive to create an environment where students can explore, learn, and contribute 
-                to the ever-evolving world of technology.
-              </p>
+        <div className="max-w-7xl mx-auto mb-20">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            
+            {/* Mission Statement */}
+            <div className="professional-card p-8 md:p-10 rounded-lg h-full border-l-4 border-blue-500">
+              <div className="flex items-start mb-6">
+                <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                </div>
+                <div>
+                  <h3 className={`${orbitron.className} text-xl font-bold mb-2 text-blue-300`}>MISSION STATEMENT</h3>
+                  <div className="w-12 h-0.5 bg-blue-500/50"></div>
+                </div>
+              </div>
+              
+              <div className="space-y-4">
+                <p className={`${spaceGrotesk.className} text-lg text-blue-500 font-medium leading-relaxed`}>
+                  To bridge the gap between academic learning and industry requirements by providing hands-on experience in cutting-edge technologies, fostering innovation, and building a community of passionate tech enthusiasts.
+                </p>
+                <p className="text-slate-400 font-light leading-relaxed">
+                  We strive to create an environment where students can explore, learn, and contribute to the ever-evolving world of technology through structured peer-driven programs.
+                </p>
+              </div>
             </div>
             
-            <div className="cyber-card p-8 rounded-lg">
-              <h2 className="text-3xl font-bold mb-6 text-purple-400">Our Vision</h2>
-              <p className="text-gray-300 leading-relaxed mb-4">
-                To be the leading technical club that shapes future technology leaders and innovators, 
-                contributing significantly to the advancement of the IT industry.
-              </p>
-              <p className="text-gray-300 leading-relaxed">
-                We envision a community where creativity meets technology, and every member becomes 
-                a catalyst for positive change in the digital world.
-              </p>
+            {/* Vision Statement */}
+            <div className="professional-card p-8 md:p-10 rounded-lg h-full border-t-2 border-blue-500/30">
+              <div className="flex items-start mb-6">
+                <div className="w-12 h-12 rounded-lg bg-blue-500/10 border border-blue-500/30 flex items-center justify-center mr-4 flex-shrink-0">
+                  <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                </div>
+                <div>
+                  <h3 className={`${orbitron.className} text-xl font-bold mb-2 text-blue-300`}>VISION STATEMENT</h3>
+                  <div className="w-12 h-0.5 bg-blue-500/50"></div>
+                </div>
+              </div>
+              <div className="space-y-6 text-slate-300 font-light leading-relaxed">
+                <p className={`${spaceGrotesk.className} text-lg text-blue-500 font-medium leading-relaxed`}>
+                  To be the leading technical club that shapes future technology leaders and innovators, producing world-class technical leaders who solve complex global challenges.
+                </p>
+                <p className="text-slate-400 font-light leading-relaxed">
+                  We envision a community where creativity meets technology, and every member becomes a catalyst for positive change in the digital world.
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -567,24 +588,30 @@ export default function About() {
             Our Core Values
           </h2>
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="cyber-card p-8 rounded-lg text-center">
-              <div className="text-5xl mb-4">🚀</div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Innovation</h3>
-              <p className="text-gray-300">
+            <div className="cyber-card p-8 rounded-lg text-center border border-blue-500/10 hover:border-blue-500/30 transition-all">
+              <div className="w-12 h-12 mx-auto mb-6 rounded bg-gradient-to-br from-blue-600/20 to-blue-800/20 border border-blue-500/30 flex items-center justify-center relative">
+                <div className="w-3 h-3 bg-blue-400 rotate-45"></div>
+              </div>
+              <h3 className="text-2xl font-bold text-blue-300 mb-4 uppercase tracking-wider">Innovation</h3>
+              <p className="text-gray-300 leading-relaxed font-light">
                 We foster creative thinking and encourage breakthrough solutions to real-world problems.
               </p>
             </div>
-            <div className="cyber-card p-8 rounded-lg text-center">
-              <div className="text-5xl mb-4">🤝</div>
-              <h3 className="text-2xl font-bold text-purple-400 mb-4">Collaboration</h3>
-              <p className="text-gray-300">
+            <div className="cyber-card p-8 rounded-lg text-center border border-blue-500/10 hover:border-blue-500/30 transition-all">
+              <div className="w-12 h-12 mx-auto mb-6 rounded bg-gradient-to-br from-purple-600/20 to-purple-800/20 border border-purple-500/30 flex items-center justify-center relative">
+                <div className="w-3 h-3 bg-purple-400 rotate-45"></div>
+              </div>
+              <h3 className="text-2xl font-bold text-purple-300 mb-4 uppercase tracking-wider">Collaboration</h3>
+              <p className="text-gray-300 leading-relaxed font-light">
                 We believe in the power of teamwork and collective intelligence to achieve excellence.
               </p>
             </div>
-            <div className="cyber-card p-8 rounded-lg text-center">
-              <div className="text-5xl mb-4">📚</div>
-              <h3 className="text-2xl font-bold text-cyan-400 mb-4">Learning</h3>
-              <p className="text-gray-300">
+            <div className="cyber-card p-8 rounded-lg text-center border border-blue-500/10 hover:border-blue-500/30 transition-all">
+              <div className="w-12 h-12 mx-auto mb-6 rounded bg-gradient-to-br from-cyan-600/20 to-cyan-800/20 border border-cyan-500/30 flex items-center justify-center relative">
+                <div className="w-3 h-3 bg-cyan-400 rotate-45"></div>
+              </div>
+              <h3 className="text-2xl font-bold text-cyan-300 mb-4 uppercase tracking-wider">Learning</h3>
+              <p className="text-gray-300 leading-relaxed font-light">
                 We promote continuous learning and adaptation to stay ahead in the rapidly evolving tech landscape.
               </p>
             </div>

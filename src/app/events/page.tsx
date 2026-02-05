@@ -118,10 +118,10 @@ export default function Events() {
       : events.filter((event) => event.category === filter);
 
   const stats = [
-    { number: "50+", label: "Events Conducted", icon: "📅" },
-    { number: "2000+", label: "Participants", icon: "👥" },
-    { number: "₹1L+", label: "Prize Money", icon: "🏆" },
-    { number: "25+", label: "Industry Partners", icon: "🤝" },
+    { number: "50+", label: "Events Conducted", icon: null },
+    { number: "2000+", label: "Participants", icon: null },
+    { number: "₹1L+", label: "Prize Money", icon: null },
+    { number: "25+", label: "Industry Partners", icon: null },
   ];
 
   return (
@@ -147,7 +147,9 @@ export default function Events() {
                 className="cyber-card p-4 rounded-lg text-center animate-scaleIn"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className="text-3xl mb-2">{stat.icon}</div>
+                <div className="w-8 h-8 rounded-lg bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center mx-auto mb-2">
+                  <div className="w-2 h-2 bg-cyan-500 rotate-45"></div>
+                </div>
                 <div className="text-2xl md:text-3xl font-bold text-cyan-400 mb-1">
                   {stat.number}
                 </div>
@@ -222,10 +224,10 @@ export default function Events() {
                     {event.description}
                   </p>
 
-                  <div className="space-y-1 text-xs text-gray-400 mb-4">
-                    <p>📅 {event.date}</p>
-                    <p>⏰ {event.time}</p>
-                    <p>💰 {event.amount}</p>
+                  <div className="space-y-1 text-[10px] uppercase tracking-wider text-gray-400 mb-4 font-bold">
+                    <p className="flex items-center"><span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2"></span> {event.date}</p>
+                    <p className="flex items-center"><span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2"></span> {event.time}</p>
+                    <p className="flex items-center"><span className="w-1.5 h-1.5 bg-cyan-500 rounded-full mr-2"></span> {event.amount}</p>
                   </div>
 
                   <button
@@ -293,29 +295,29 @@ export default function Events() {
             <div className="grid md:grid-cols-2 gap-4 text-sm text-gray-300 mb-6">
               <div className="space-y-3">
                 <p>
-                  <strong className="text-cyan-400">📅 Date:</strong>{" "}
+                  <strong className="text-cyan-400 uppercase tracking-widest text-xs">Date:</strong>{" "}
                   {selectedEvent.date}
                 </p>
                 <p>
-                  <strong className="text-cyan-400">⏰ Time:</strong>{" "}
+                  <strong className="text-cyan-400 uppercase tracking-widest text-xs">Time:</strong>{" "}
                   {selectedEvent.time}
                 </p>
                 <p>
-                  <strong className="text-cyan-400">👥 Participants:</strong>{" "}
+                  <strong className="text-cyan-400 uppercase tracking-widest text-xs">Participants:</strong>{" "}
                   {selectedEvent.participants}
                 </p>
               </div>
               <div className="space-y-3">
                 <p>
-                  <strong className="text-cyan-400">💰 Fee:</strong>{" "}
+                  <strong className="text-cyan-400 uppercase tracking-widest text-xs">Fee:</strong>{" "}
                   {selectedEvent.amount}
                 </p>
                 <p>
-                  <strong className="text-cyan-400">🏆 Rewards:</strong>{" "}
+                  <strong className="text-cyan-400 uppercase tracking-widest text-xs">Rewards:</strong>{" "}
                   {selectedEvent.prize}
                 </p>
                 <p>
-                  <strong className="text-cyan-400">📍 Venue:</strong>{" "}
+                  <strong className="text-cyan-400 uppercase tracking-widest text-xs">Venue:</strong>{" "}
                   {selectedEvent.venue}
                 </p>
               </div>
