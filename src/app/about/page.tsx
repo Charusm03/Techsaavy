@@ -371,7 +371,7 @@ const CardStack = ({ members }: { members: any[] }) => {
     setMounted(true);
     const interval = setInterval(() => {
       if (!isAnimating) {
-        setActiveCard(prev => (prev + 1) % members.length);
+        setActiveCard((prev: number) => (prev + 1) % members.length);
       }
     }, 6000);
     return () => clearInterval(interval);
